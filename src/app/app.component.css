@@ -1,0 +1,82 @@
+
+.wrapper{
+  background-color: #9DB5B2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5vw;
+  margin-top: 20px;
+  color: #3B413C;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  height: 35px;
+  background-color: #DAF0EE;
+  border-radius: 10px;
+  width: 70vw;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.toggleAndLabel{
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+label {
+  width: 90%;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.toggle {
+  margin-left: 10px;
+  background-color: #9DB5B2;
+}
+
+button {
+  border: none;
+  background-color: #3B413C;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.new-todo {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  width: 70vw;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: #DAF0EE;
+  padding-left: 20px;
+}
+
