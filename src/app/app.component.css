@@ -20,11 +20,7 @@ h1 {
   color: #3B413C;
 }
 
-ul {
-  list-style-type: none;
-}
-
-li {
+.listItems {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +28,7 @@ li {
   height: 35px;
   background-color: #DAF0EE;
   border-radius: 10px;
-  width: 70vw;
+  width: 85vw;
   margin-top: 15px;
   overflow: hidden;
 }
@@ -40,7 +36,7 @@ li {
 .toggleAndLabel{
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 80%;
 }
 
 label {
@@ -54,7 +50,7 @@ label {
   background-color: #9DB5B2;
 }
 
-button {
+.deleteButton {
   border: none;
   background-color: #3B413C;
   color: #ffffff;
@@ -68,15 +64,53 @@ button {
   justify-content: center;
 }
 
+.editButton {
+  border: none;
+  color: #3B413C;
+  background-color: #DAF0EE;
+  font-weight: bold;
+  outline: none;
+}
+
 
 .new-todo {
   border: none;
   outline: none;
   border-radius: 20px;
-  width: 70vw;
+  width: 60vw;
   height: 30px;
   margin-bottom: 20px;
   background-color: #DAF0EE;
   padding-left: 20px;
 }
 
+.main {
+  overflow: scroll;
+  margin-bottom: 15px;
+}
+
+footer {
+  display: flex;
+  border-top: solid 2px #3B413C;
+  padding-top: 10px;
+}
+
+.menuIcon {
+  background-image: url('../assets/menu.svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #DAF0EE;
+  margin-left: 10px;
+}
+
+input::placeholder {
+  letter-spacing: 1px;
+}
+
+.nothingMessage {
+  text-align: center;
+}

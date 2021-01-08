@@ -1,21 +1,21 @@
 <div class="wrapper">
   <header class="header">
-    <h1>HEY, {{ name | uppercase }}. Ready to do some work?</h1>
+    <h1>HEY, {{ name | uppercase }}. Let's get to work!</h1>
   </header>
+  <div class="nothingMessage" *ngIf="todos.length < 1">Nothing to do!<br> Add some reminders below.</div>
   <section class="main" *ngIf="todos.length > 0">
-    <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+      <div class="listItems" *ngFor="let todo of todos" [class.completed]="todo.complete">
         <div class = "toggleAndLabel">
           <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
           <label>{{todo.title}}</label>
         </div>
-          <button class="destroy" (click)="removeTodo(todo)">x</button>
-      </li>
-    </ul>
+          <button class="editButton" (click)="editTodo(todo.id, todo.task)">Edit</button>
+          <button class="deleteButton" (click)="removeTodo(todo)">x</button>
+      </div>
   </section>
   <footer class="footer" *ngIf="todos.length >= 0">
     <input class="new-todo" maxlength="15" placeholder="Write a new task" autofocus=""  [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
-    <!-- <span class="todo-count"><strong>{{ todos.length }}</strong>{{ todos.length == 1 ? 'item' : 'items' }} left</span> -->
+    <div class="menuIcon"></div>
   </footer>
 </div>
 
