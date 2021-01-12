@@ -9,12 +9,12 @@
           <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
           <label>{{todo.title}}</label>
         </div>
-          <button class="editButton" (click)="editTodo(todo.id, todo.task)">Edit</button>
-          <button class="deleteButton" (click)="removeTodo(todo)">x</button>
+          <button class="editButton" (click)="editTodo(todo.title)">Edit</button>
+          <button class="deleteButton" (click)="removeTodo(todo.id)">x</button>
       </div>
   </section>
   <footer class="footer" *ngIf="todos.length >= 0">
-    <input class="new-todo" maxlength="15" placeholder="Write a new task" autofocus=""  [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <input class="new-todo" maxlength="15" placeholder="Write a new task" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
     <div class="menuIcon"></div>
   </footer>
 </div>

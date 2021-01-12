@@ -6,7 +6,7 @@ import { Todo } from './todo';
   )
 export class TodoDataService {
 
-  lastId: number = 0;
+  lastId: number = -1;
 
   todos: Todo[] = [];
 
@@ -20,14 +20,13 @@ addTodo(todo: Todo): TodoDataService {
   return this;
 }
 
-deleteTodoById(id: number): TodoDataService {
-  this.todos = this.todos.filter(todo => todo.id !== id);
-  return this;
+deleteTodoById(id: number){
+  let index = this.todos.findIndex(x => x.id === id);
+  return this.todos.splice(index, 1);
 }
 
 updateTodoById(id: number, values: Object = {}): Todo {
   let todo = this.getTodoById(id);
-  console.log(todo);
   if(!todo) {
     return null;
   }
@@ -49,4 +48,5 @@ toggleTodoComplete(todo: Todo){
   });
   return updatedTodo;
 }
+
 }

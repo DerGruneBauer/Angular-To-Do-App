@@ -20,23 +20,23 @@ export class AppComponent {
   constructor(private todoDataService: TodoDataService){
   }
 
+
   addTodo(){
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();
   }
 
-  editTodo() {
-    this.todoDataService.updateTodoById(this.newTodo.id);
-    console.log('hi');
-    console.log(this.newTodo.id);
+  editTodo(title: string) {
+    console.log(title);
+    // this.todoDataService.updateTodoById(this.newTodo.id);
   }
 
   toggleTodoComplete(todo: Todo){
     this.todoDataService.toggleTodoComplete(todo);
   }
 
-  removeTodo(todo: Todo){
-    this.todoDataService.toggleTodoComplete(todo);
+  removeTodo(id: number){
+    this.todoDataService.deleteTodoById(id);
   }
 
   get todos() {
